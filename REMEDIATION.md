@@ -1,6 +1,6 @@
 # REMEDIATION.md — muse-mod-audit
 
-**Version:** 1.0
+**Version:** 1.1
 **Last Updated:** 2026-03-12
 
 ---
@@ -19,14 +19,12 @@
 
 ### REM-001: Sharpen Step 1 Tasks with Acceptance Criteria
 
-**Status:** OPEN
-**Priority:** Highest — single greatest leverage on
-implementation velocity.
-
-Rewrite each Step 1 task and research item in Muse's
-TODO.md with explicit acceptance criteria following the
-pattern: what artifact exists, what behavior confirms it
-works, what the human checks in under a minute.
+**Status:** DONE
+**Resolution:** Every Step 1 task and research item in
+TODO.md rewritten with explicit "Done when" acceptance
+criteria naming concrete artifacts or observable outcomes.
+Deliverable produced in audit Session 002; ready for
+builder to carry into TODO.md.
 
 **Acceptance Criteria:** Every Step 1 item in TODO.md has
 a "Done when" statement. Each statement names a concrete
@@ -36,15 +34,12 @@ artifact or observable outcome, not a subjective judgment.
 
 ### REM-002: Reduce Session Close Ceremony
 
-**Status:** OPEN
-**Priority:** High — recovers 10–15 min per
-implementation session.
-
-Change Muse's minimum session close from three-document
-update (TODO + SESSIONLOG + CHANGELOG) to one-document
-update (TODO.md only). SESSIONLOG and CHANGELOG become
-periodic batch updates every third session or during
-scheduled governance sessions.
+**Status:** DONE
+**Resolution:** Draft replacement section produced for
+SYSTEM_PROMPT.md. Minimum close reduced to TODO.md only.
+SESSIONLOG batch update every third session or during
+governance sessions. CHANGELOG references removed per
+REM-003. Awaits builder review and application.
 
 **Acceptance Criteria:** Muse SYSTEM_PROMPT.md session
 close rules updated to require only TODO.md. Batch
@@ -55,14 +50,12 @@ implementation session uses the lighter close.
 
 ### REM-003: Evaluate CHANGELOG Consolidation
 
-**Status:** OPEN
-**Priority:** High — reduces document count, recovers
-token budget, eliminates maintenance overlap.
-
-Assess whether CHANGELOG.md should be retired as a
-standalone document and its content merged into
-SESSIONLOG.md entries. CHANGELOG serves versioned
-releases; Muse has no releases yet.
+**Status:** DONE
+**Resolution:** Option A — retire. CHANGELOG.md deleted,
+CORE_CONTEXT.md registry updated, session close references
+removed. No release consumers exist. Recreate as
+release-scoped document when versioned releases begin
+(Phase 1a Step 7 earliest).
 
 **Acceptance Criteria:** Decision recorded (keep, merge,
 or retire) with rationale. If merged or retired, Muse
@@ -74,14 +67,14 @@ documents updated accordingly and token budget recovered.
 
 ### REM-004: Acceptance Criteria at Task-Pull Time
 
-**Status:** OPEN
-**Priority:** Medium — sustains the practice REM-001
-establishes.
-
-Add a standing practice: when pulling a task into a
-session, write 2–3 sentence acceptance criteria before
-any work begins. Encode this in Muse's SYSTEM_PROMPT.md
-as a session-open step for implementation sessions.
+**Status:** DONE
+**Resolution:** Draft addition produced for
+SYSTEM_PROMPT.md. Standing rule: when pulling a task into
+a session, write 2–3 sentence acceptance criteria before
+work begins. Encoded as session-open step for
+implementation sessions. Awaits builder review and
+application. Practice observation deferred to first two
+implementation sessions.
 
 **Acceptance Criteria:** Rule added to Muse
 SYSTEM_PROMPT.md. Practice observed in at least two
@@ -91,31 +84,27 @@ implementation sessions.
 
 ### REM-005: Experiment with Model Tiering
 
-**Status:** OPEN
-**Priority:** Medium — reduces cost, validates Muse's
-core product thesis.
+**Status:** IN-PROGRESS
+**Protocol:** Run two early Step 1 sessions on Sonnet 3.5
+(scaffold generation, research checks RES-S11-A through C,
+or batch doc updates). After each session note: rule
+compliance, output quality, escalation needed. After both,
+write DECISIONS.md entry with concrete tiering policy.
+Cannot close until two Sonnet sessions complete.
 
-Try Sonnet-class models for routine documentation,
-TODO maintenance, and SESSIONLOG batch updates. Reserve
-Opus for architecture and complex implementation. Track
-results as user research for the model router.
-
-**Acceptance Criteria:** At least two sessions run on a
-lighter model. Outcomes noted (what worked, what didn't).
-Findings recorded in Muse DECISIONS.md or research notes.
+**Acceptance Criteria:** Two Sonnet sessions completed.
+Findings entry exists in DECISIONS.md with concrete
+tiering policy statement. Policy is evidence-based.
 
 ---
 
 ### REM-006: Create ROADMAP.md
 
-**Status:** OPEN
-**Priority:** Medium — low cost, immediate orientation
-benefit.
-
-Create a minimal ROADMAP.md in the Muse workspace: phase
-names, what each delivers, current position. Half a page
-maximum. Consolidates roadmap information currently
-scattered across TODO.md and ARCHITECTURE.md.
+**Status:** DONE
+**Resolution:** ROADMAP.md v0.1 produced and accepted.
+Under 750 tokens. Covers all three phases with current
+position marker. Placed at repo root. CORE_CONTEXT.md
+registry updated to include it.
 
 **Acceptance Criteria:** ROADMAP.md exists in Muse
 workspace, under 750 tokens, referenced in Muse
@@ -156,17 +145,17 @@ approximation available now.
 
 | Tier   | Total | Open | In-Progress | Done | Deferred |
 |--------|-------|------|-------------|------|----------|
-| Tier 1 |     3 |    3 |           0 |    0 |        0 |
-| Tier 2 |     3 |    3 |           0 |    0 |        0 |
+| Tier 1 |     3 |    0 |           0 |    3 |        0 |
+| Tier 2 |     3 |    0 |           1 |    2 |        0 |
 | Tier 3 |     3 |    0 |           0 |    0 |        3 |
-| **All** |   **9** | **6** |       **0** | **0** |    **3** |
+| **All** |   **9** | **0** |       **1** | **5** |    **3** |
 
 ---
 
 ## Next Action
 
-REM-001. Produce rewritten Step 1 tasks with acceptance
-criteria, ready for the human to carry into Muse's
-TODO.md.
+REM-005. Run two Sonnet sessions during early Step 1 work.
+All other items complete or deferred. Audit substantially
+closed.
 
 *End of REMEDIATION.md*
